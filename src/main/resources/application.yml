@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: stock-reserve
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+      accept-float-as-int: false
+      fail-on-numbers-for-enums: true
+server:
+  port: ${PORT:8080}
+  address: ${SERVER_ADDRESS:127.0.0.1}
+  error:
+    include-message: never
+    include-stacktrace: never
+app:
+  auth:
+    duracao-token: ${AUTH_TOKEN_DURATION:8h}
+  admin:
+    nome: Administrador
+    email: ${APP_ADMIN_EMAIL:admin@local.test}
+    senha: ${APP_ADMIN_PASSWORD:}
